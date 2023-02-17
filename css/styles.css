@@ -73,7 +73,6 @@ ul {
 }
 
 .li-style-header {
-  /* padding: 24px 0; */
   text-decoration: none;
   list-style-type: none;
 }
@@ -165,12 +164,11 @@ ul {
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    )
+    ),
     url(../images/people-office\ 1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: var(--color-navy-back);
 }
 
 .two-hero {
@@ -223,7 +221,22 @@ ul {
   padding-bottom: 120px;
 }
 
-.section-three-container {
+.socials-icon-top {
+  display: block;
+  height: 112px;
+  fill: var(--color-white);
+}
+
+.socials-icon-top {
+  background-color: var(--color-cloud-back);
+  border-radius: 4px;
+  display: block;
+  width: 64px;
+  height: 64px;
+  fill: var(--color-white);
+}
+
+.section-three {
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -262,9 +275,9 @@ ul {
   margin: 8px 0 0 0;
 }
 
-/* ******************** Section three ************************** */
+/* ***************** Section three ***************** */
 .our-team {
-  padding: 120px 0;
+  padding: 120px 0 110px 0;
   background-color: var(--color-cloud-back);
 }
 
@@ -291,6 +304,23 @@ ul {
   flex-basis: calc((100% - 72px) / 4);
 }
 
+/* ****************** Section customers*************** */
+
+.customers {
+  width: 100%;
+  max-width: 1158px;
+  padding: 130px 16px 120px 16px;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.customers-link {
+  /* border: 1px solid var(--color-cornflower); */
+  height: 88px;
+  width: 168px;
+  flex-basis: calc((100% - 120px) / 6);
+}
+
 /* ***************** Footer ********************** */
 .section-back-footer {
   padding: 100px 0;
@@ -304,6 +334,19 @@ ul {
   line-height: 1.5;
   margin-top: 16px;
   max-width: 264px;
+}
+
+.footer-section {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.social-text {
+  font-weight: 500;
+  color: var(--color-white);
 }
 
 /* ***************** Portfolio ********************* */
@@ -383,16 +426,35 @@ ul {
   overflow: hidden;
 }
 
-.social-icons {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.socials-list {
+  display: flex;
+  gap: 24px;
   margin-top: 8px;
-  justify-content: space-between;
 }
 
-.social-icons-styles {
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials-link {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-iris);
+}
+
+.socials-icon {
+  display: block;
   width: 16px;
   height: 16px;
-  background-color: tomato;
+  fill: var(--color-white);
+}
+
+.use {
+  width: 16px;
+  height: 16px;
 }
