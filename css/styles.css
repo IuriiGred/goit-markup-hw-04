@@ -12,6 +12,8 @@
   --color-iris-back: #4d5ae5;
   --color-back: #ffffff;
   --color-white: #ffffff;
+  --color-green: #31d0aa;
+  --color-light-slate: #8e8f99;
 }
 
 *,
@@ -25,7 +27,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  background-color: var(--color-back);
+  background: var(--color-back);
 }
 
 p,
@@ -54,6 +56,8 @@ ul {
 /* ******************* Header ************************* */
 .header-bottom {
   border-bottom: 1px solid var(--color-cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -165,10 +169,10 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1.jpg);
+    url(../images/people-office.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .two-hero {
@@ -221,31 +225,28 @@ ul {
   padding-bottom: 120px;
 }
 
-.socials-icon-top {
-  display: block;
-  height: 112px;
-  fill: var(--color-white);
-}
-
-.socials-icon-top {
-  background-color: var(--color-cloud-back);
-  border-radius: 4px;
-  display: block;
-  width: 64px;
-  height: 64px;
-  fill: var(--color-white);
-}
-
-.section-three {
+.section-two-container {
   display: flex;
   gap: 24px;
+  width: 100%;
   justify-content: space-between;
 }
 
-.li-style {
+.two-style {
   flex-basis: calc((100% - 72px) / 4);
   text-decoration: none;
   list-style-type: none;
+}
+
+.object-list {
+  padding: 24px 100px;
+  border-radius: 4px;
+  background-color: var(--color-cloud-back);
+}
+
+.object-icons {
+  width: 64px;
+  height: 64px;
 }
 
 .header-two {
@@ -256,6 +257,10 @@ ul {
   font-weight: 700;
   text-align: center;
   margin: 0;
+}
+
+.li-style {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .header-three {
@@ -275,7 +280,7 @@ ul {
   margin: 8px 0 0 0;
 }
 
-/* ***************** Section three ***************** */
+/* ******************** Section team ************************** */
 .our-team {
   padding: 120px 0 110px 0;
   background-color: var(--color-cloud-back);
@@ -289,7 +294,7 @@ ul {
   padding: 32px 16px;
 }
 
-.section-four {
+.section-two {
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -301,27 +306,66 @@ ul {
   background-color: var(--color-back);
   text-decoration: none;
   list-style-type: none;
-  flex-basis: calc((100% - 72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
-/* ****************** Section customers*************** */
+.section-four {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin: 72px 0 0 0;
+  flex-wrap: wrap;
+  flex-basis: calc(((100% - 72px) / 4));
+}
 
-.customers {
-  width: 100%;
-  max-width: 1158px;
-  padding: 130px 16px 120px 16px;
-  margin: 0 auto;
-  list-style-type: none;
+/* ************* Section customers *************** */
+
+.customer {
+  padding-top: 130px;
+}
+
+.customers-list {
+  justify-content: center;
+  display: flex;
+  gap: 16px;
+  margin-top: 72px;
+}
+
+.customers-item {
+  width: 168px;
+  height: 88px;
 }
 
 .customers-link {
-  /* border: 1px solid var(--color-cornflower); */
-  height: 88px;
-  width: 168px;
-  flex-basis: calc((100% - 120px) / 6);
+  border: 1px solid var(--color-light-slate);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-light-slate);
+}
+
+.customers-icons:hover,
+.customers-icons:active {
+  background-color: var(--color-ocean);
+}
+
+.customers-icons {
+  width: 94px;
+  height: 44px;
 }
 
 /* ***************** Footer ********************** */
+
+.footer-end-socials {
+  display: flex;
+  gap: 120px;
+}
+
 .section-back-footer {
   padding: 100px 0;
   background-color: var(--color-navy-back);
@@ -336,17 +380,40 @@ ul {
   max-width: 264px;
 }
 
-.footer-section {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-}
+/* ?*************** Social list footer *********** */
 
-.social-text {
+.social-media {
   font-weight: 500;
   color: var(--color-white);
+  letter-spacing: 0.02em;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+
+.social-list-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.social-icons-footer {
+  color: var(--color-cloud);
+  width: 16px;
+  height: 16px;
+}
+
+.social-link-footer:hover,
+.social-link-footer:active {
+  background-color: var(--color-green);
 }
 
 /* ***************** Portfolio ********************* */
@@ -379,6 +446,7 @@ ul {
   margin-bottom: 48px;
   background-color: var(--color-back);
   flex-basis: calc((100% - 72px) / 3);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .top-portfolio {
@@ -405,12 +473,14 @@ ul {
 .list-button.all {
   background-color: var(--color-ocean-back);
   color: var(--color-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08);
 }
 
 .list-button:focus,
 .list-button:hover {
   background-color: var(--color-ocean-back);
   color: var(--color-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08);
 }
 
 .visually-hidden {
@@ -426,35 +496,31 @@ ul {
   overflow: hidden;
 }
 
-.socials-list {
+/* ***************** Social icons *********** */
+
+.social-list {
+  justify-content: center;
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin-top: 8px;
 }
 
-.socials-item {
+.social-icons {
+  width: 16px;
+  height: 16px;
+}
+
+.social-item {
   width: 40px;
   height: 40px;
 }
 
-.socials-link {
+.social-link {
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  border-radius: 50%;
   width: 100%;
   height: 100%;
-  background-color: var(--color-iris);
-}
-
-.socials-icon {
-  display: block;
-  width: 16px;
-  height: 16px;
-  fill: var(--color-white);
-}
-
-.use {
-  width: 16px;
-  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-iris-back);
 }
