@@ -140,7 +140,6 @@ ul {
 
 .menu-nav:active {
   color: var(--color-ocean);
-  text-decoration: underline var(--color-ocean);
   background-color: var(--color-back);
 }
 
@@ -164,6 +163,7 @@ ul {
 
 /* ************************** Hero ********************** */
 .section-back {
+  max-width: 1440px;
   padding: 188px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -179,7 +179,6 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 
 .hero-title {
@@ -226,6 +225,7 @@ ul {
 }
 
 .section-two-container {
+  flex-wrap: wrap;
   display: flex;
   gap: 24px;
   width: 100%;
@@ -239,7 +239,9 @@ ul {
 }
 
 .object-list {
-  padding: 24px 100px;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
   border-radius: 4px;
   background-color: var(--color-cloud-back);
 }
@@ -269,7 +271,7 @@ ul {
   letter-spacing: 0.02em;
   line-height: 1.2;
   font-weight: 500;
-  margin: 0;
+  margin-top: 8px;
 }
 
 .body-three {
@@ -349,12 +351,13 @@ ul {
   color: var(--color-light-slate);
 }
 
-.customers-icons:hover,
-.customers-icons:active {
-  background-color: var(--color-ocean);
+.customers-link:hover {
+  color: var(--color-ocean);
+  border-color: var(--color-ocean);
 }
 
 .customers-icons {
+  fill: currentColor;
   width: 94px;
   height: 44px;
 }
@@ -406,13 +409,12 @@ ul {
 }
 
 .social-icons-footer {
-  color: var(--color-cloud);
+  fill: var(--color-cloud);
   width: 16px;
   height: 16px;
 }
 
-.social-link-footer:hover,
-.social-link-footer:active {
+.social-link-footer:hover {
   background-color: var(--color-green);
 }
 
@@ -476,8 +478,8 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08);
 }
 
-.list-button:focus,
 .list-button:hover {
+  border-color: var(--color-ocean-back);
   background-color: var(--color-ocean-back);
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08);
@@ -506,6 +508,7 @@ ul {
 }
 
 .social-icons {
+  fill: var(--color-cloud);
   width: 16px;
   height: 16px;
 }
@@ -523,4 +526,8 @@ ul {
   height: 100%;
   border-radius: 50%;
   background-color: var(--color-iris-back);
+}
+
+.social-link:hover {
+  background-color: var(--color-ocean-back);
 }
